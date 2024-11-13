@@ -80,7 +80,7 @@
                     
 
                     if (isset($currencies[$key])) {
-                        echo $pris . ' ' . $_GET['form'] . ' = ' . $currencies[$_GET['form']] * $pris ;
+                        echo $pris . ' ' . $_GET['form'] . ' = ' . $currencies[$_GET['form']] * $pris . ' UZS' ;
                     } else {
                         echo 'Valyuta ma\'lumotlari topilmadi.';
                     }
