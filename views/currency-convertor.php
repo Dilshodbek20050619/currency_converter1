@@ -85,15 +85,26 @@
                 </div>
                 <p class="rate-info mt-2">
                     <?php
-                    $pris = $_GET['prise'];
+                    if (isset($_POST['prise']) && isset($_POST['form']) && isset($_POST['forn']) ) {
+                        $pris = $_GET['prise'];
+                        $form = $_GET['form'];
+                        $forn = $_GET['forn'];
+                    }
+                    else {
+                        $pris = '10000';
+                        $input1 = 'UZS';
+                        $input2 = 'USD';
 
-                    if ($_GET['form'] == 'UZS' or $_GET['forn'] =='UZS') {
+                    }
 
-                        if ($_GET['form']=='UZS') {
-                            echo $pris . ' ' . $_GET['form']. ' = ' . $pris/$currencies[$_GET['forn']] . $_GET['forn'] . '<br>'; ;
+
+                    if ($input1 == 'UZS' or $input2 =='UZS') {
+
+                        if ($input1=='UZS') {
+                            echo $pris . ' ' . $input1. ' = ' . $pris/$currencies[$input2] . $input2 . '<br>'; ;
                         } else {
 
-                            echo $pris . ' ' . $_GET['form']. ' = ' . $pris*$currencies[$_GET['form']] . $_GET['forn'] . '<br>'; ;
+                            echo $pris . ' ' . $input1. ' = ' . $pris*$currencies[$input1] . $input2 . '<br>'; ;
                         }
                     }
                     else {
