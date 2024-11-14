@@ -53,36 +53,51 @@
 
                         <select class="form-select" name="form">
                             <?php
-                            $limit = 0;
+
                             global $currencies;
                             foreach ($currencies as $key => $currency) {
-                                $limit++;
-                                if ($limit == 10) {
-                                    break;
-                                }
+
                                 echo '<option value="' . $key . '">' . $key . '</option>';
+                                
                             }
                             ?>
+                            <option value="UZS">UZS</option>
                         </select>
                     </div>
                     <div class="col-md-1 text-center">
                         <span>⇆</span>
                     </div>
                     <div class="col-md-3">
-                        <select class="form-select">
-                            <option value="">UZS</option>
+                        <select class="form-select" name="forn">
+                            <?php
+
+                            global $currencies;
+                            foreach ($currencies as $keys => $currency) {
+
+                                echo '<option value="' . $keys . '">' . $keys . '</option>';
+                            
+                            }
+                            ?>
+                            <option value="UZS">UZS</option>
+                            <option value=""></option>
                         </select>
                     </div>
                 </div>
                 <p class="rate-info mt-2">
                     <?php
                     $pris = $_GET['prise'];
-                    
 
-                    if (isset($currencies[$key])) {
-                        echo $pris . ' ' . $_GET['form'] . ' = ' . $currencies[$_GET['form']] * $pris . ' UZS' ;
-                    } else {
-                        echo 'Valyuta ma\'lumotlari topilmadi.';
+                    if ($_GET['form'] == 'UZS' or $_GET['forn'] =='UZS') {
+
+                        if ($_GET['form']=='UZS') {
+                            echo $pris . ' ' . $_GET['form']. ' = ' . $pris/$currencies[$_GET['forn']] . $_GET['forn'] . '<br>'; ;
+                        } else {
+
+                            echo $pris . ' ' . $_GET['form']. ' = ' . $pris*$currencies[$_GET['form']] . $_GET['forn'] . '<br>'; ;
+                        }
+                    }
+                    else {
+                        echo 'Hech bulmasa bittasi UZS bulishi kerak';
                     }
                     ?>
                     <i class="bi bi-info-circle"></i>
@@ -96,7 +111,9 @@
         <p class="text-muted">If you’ve got a target exchange rate in mind but haven’t got time to keep tabs on market
             movement, then a firm order could be perfect for you. When your chosen rate is reached, we’ll act immediately,
             leaving you free to concentrate on your business.</p>
-        <button class="btn btn-outline-danger">Find out more</button>
+        <form action="weather.php">
+            <button class="btn btn-outline-danger">Ob-Havo malumoti</button>
+        </form>
     </div>
 </body>
 
