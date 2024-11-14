@@ -103,7 +103,7 @@
                     <i class="bi bi-info-circle"></i>
                 </p>
                 <button type="submit" class="btn btn-primary btn-primary-custom mt-3">Convert</button>
-            </form>
+            </form>r
         </div>
     </div>
     <div class="info-section bg-light">
