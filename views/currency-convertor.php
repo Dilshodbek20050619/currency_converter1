@@ -122,7 +122,7 @@
         <p class="text-muted">If you’ve got a target exchange rate in mind but haven’t got time to keep tabs on market
             movement, then a firm order could be perfect for you. When your chosen rate is reached, we’ll act immediately,
             leaving you free to concentrate on your business.</p>
-        <form action="weather.php">
+        <form action="src/Weather.php">
             <button class="btn btn-outline-danger">Ob-Havo malumoti</button>
         </form>
     </div>
