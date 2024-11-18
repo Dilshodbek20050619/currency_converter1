@@ -23,3 +23,8 @@ $bot->makeRequest('sendVideo', [
     'video'=>'https://www.w3schools.com/html/mov_bbb.mp4'
 
 ]);
+$bot->makeRequest('sendImg', [
+    'chat_id' => 5016959211,
+    'photo'=>'https://talimuchun.uz/wp-content/uploads/2024/10/21-oktabr-til-bayrami-haqida-rasmlar-bayroq.png'
+
+]);
