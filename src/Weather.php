@@ -18,8 +18,7 @@
         .h1 h1 {
             text-align: center;
             margin: 30px;
-            font-family: Arial;
-            /*width: 300px;*/
+            font-family:Arial;
         }
         .input {
             border-radius: 20px;
@@ -51,7 +50,7 @@
             height: 50px;
             width: 400px;
         }
-        .h22{
+        .h22 {
             color: #fff;
         }
         .malumot {
@@ -106,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     $weatherData = file_get_contents($apiUrl);
-    if ($weatherData === FALSE) {
+    if ($weatherData == FALSE) {
         echo "Ob-havo ma'lumotlarini olishda xatolik yuz berdi.";
         exit();
     }
@@ -120,6 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<h2>Shahar: " . $weatherArray['name'] . "</h2>";
         echo "<h5>Harorat: " . $weatherArray['main']['temp'] . '°C' . "</h5>" ;"<br>";
         echo "<h5>Shamol tezligi: " . $weatherArray['wind']['speed'] . 'm/s' . "</h5>" ;"<br>";
+        echo "<h5> Havo namligi :" . $weatherArray['weather'][0]['description'] . "</h5>" ;
         echo "</div >";
     } else {
         echo "Ob-havo ma'lumotlarini olishda xatolik: " . $weatherArray['message'];
