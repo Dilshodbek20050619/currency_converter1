@@ -9,16 +9,20 @@
             background-image: url("https://i.ytimg.com/vi/jRiortdMAU0/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGB8gNyh_MA8=&amp;rs=AOn4CLALfsqogHewRSp_GuBAk8hT6uA-EQ");
         }
         .h1 {
+            justify-content: center;
             border-radius: 20px;
 
-            border: 1px solid black;
-            background-color: #a8e9ff;
+            border: 0px solid black;
+            background-color: #b9dbe7;
+
+
 
         }
         .h1 h1 {
             text-align: center;
             margin: 30px;
-            font-family:Arial;
+
+
         }
         .input {
             border-radius: 20px;
